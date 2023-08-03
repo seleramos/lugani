@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Cuatrimestre y Fecha Formateada</title>
+</head>
+<body>
+    <script>
+        function obtenerNombreDia(dia) {
+            let nombresDias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            return nombresDias[dia];
+        }
+
+        function obtenerNombreMes(mes) {
+            let nombresMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            return nombresMeses[mes];
+        }
+
+        // Obtener la fecha actual
+        let fecha = new Date();
+        
+        // Obtener el día de la semana
+        let diaSemana = fecha.getDay();
+        
+        // Obtener el nombre del día de la semana y del mes
+        let nombreDia = obtenerNombreDia(diaSemana);
+        let nombreMes = obtenerNombreMes(fecha.getMonth());
+        
+        // Obtener el cuatrimestre
+        let mes = fecha.getMonth() + 1; // Sumar 1 porque los meses en JavaScript van de 0 a 11
+        let cuatrimestre = Math.ceil(mes / 4);
+
+        // Formatear la fecha
+        let fechaFormateada = `Hoy es ${nombreDia} ${fecha.getDate()} de ${nombreMes} de ${fecha.getFullYear()}`;
+
+        // Imprimir la información en la página
+        document.write(fechaFormateada + "<br>");
+        document.write(`Estamos en el cuatrimestre ${cuatrimestre}`);
+    </script>
+</body>
+</html>
