@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Cadenas</title>
+</head>
+<body>
+    <script>
+        // Solicitar al usuario ingresar un string
+        let cadena = prompt("Ingrese una cadena de texto:");
+
+        // Función para imprimir la primera mitad de los caracteres de la cadena
+        function imprimirPrimeraMitad(cadena) {
+            let mitad = Math.ceil(cadena.length / 2);
+            document.write("Primera mitad: " + cadena.substring(0, mitad) + "<br>");
+        }
+
+        // Función para imprimir el último carácter
+        function imprimirUltimoCaracter(cadena) {
+            document.write("Último carácter: " + cadena.charAt(cadena.length - 1) + "<br>");
+        }
+
+        // Función para imprimir la cadena en forma inversa
+        function imprimirInversa(cadena) {
+            document.write("Inversa: " + cadena.split("").reverse().join("") + "<br>");
+        }
+
+        // Función para imprimir cada carácter separado por un guión
+        function imprimirConGuiones(cadena) {
+            document.write("Con guiones: " + cadena.split("").join("-") + "<br>");
+        }
+
+        // Función para contar la cantidad de vocales
+        function contarVocales(cadena) {
+            let vocales = cadena.match(/[aeiouAEIOU]/g);
+            return vocales ? vocales.length : 0;
+        }
+
+        // Imprimir los resultados en la página
+        imprimirPrimeraMitad(cadena);
+        imprimirUltimoCaracter(cadena);
+        imprimirInversa(cadena);
+        imprimirConGuiones(cadena);
+        document.write("Cantidad de vocales: " + contarVocales(cadena) + "<br>");
+        
+        // Separar palabras en líneas distintas
+        let palabras = cadena.split(" ");
+        for (let i = 0; i < palabras.length; i++) {
+            document.write(palabras[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

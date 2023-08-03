@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Vector</title>
+</head>
+<body>
+    <script>
+        // Función para sumar los elementos de un array
+        function sumarElementos(arr) {
+            return arr.reduce((total, elemento) => total + elemento, 0);
+        }
+
+        // Obtener el vector de 8 elementos del usuario
+        let vector = [];
+        for (let i = 0; i < 8; i++) {
+            let elemento = parseInt(prompt(`Ingrese el elemento ${i + 1}:`));
+            vector.push(elemento);
+        }
+
+        // Calcular el valor acumulado de todos los elementos
+        let valorAcumuladoTotal = sumarElementos(vector);
+
+        // Calcular el valor acumulado de los elementos mayores a 36
+        let elementosMayores36 = vector.filter(elemento => elemento > 36);
+        let valorAcumuladoMayores36 = sumarElementos(elementosMayores36);
+
+        // Contar la cantidad de valores mayores a 50
+        let valoresMayores50 = vector.filter(elemento => elemento > 50);
+        let cantidadValoresMayores50 = valoresMayores50.length;
+
+        // Imprimir los resultados en la página
+        document.write(`El valor acumulado de todos los elementos del vector es: ${valorAcumuladoTotal}<br>`);
+        document.write(`El valor acumulado de los elementos mayores a 36 es: ${valorAcumuladoMayores36}<br>`);
+        document.write(`Cantidad de valores mayores a 50: ${cantidadValoresMayores50}`);
+    </script>
+</body>
+</html>

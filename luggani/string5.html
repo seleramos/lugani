@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Email</title>
+</head>
+<body>
+    <script>
+        // Función para verificar si un email contiene el carácter @
+        function verificarEmail(email) {
+            return email.includes("@");
+        }
+
+        // Solicitar al usuario ingresar una dirección de correo electrónico
+        let direccionEmail = prompt("Ingrese una dirección de correo electrónico:");
+
+        // Verificar si la dirección de email contiene el carácter @
+        if (verificarEmail(direccionEmail)) {
+            document.write(`La dirección de correo electrónico "${direccionEmail}" es válida.`);
+        } else {
+            document.write(`La dirección de correo electrónico "${direccionEmail}" no es válida.`);
+        }
+    </script>
+</body>
+</html>

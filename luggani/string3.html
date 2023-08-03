@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Clave</title>
+</head>
+<body>
+    <script>
+        // Solicitar al usuario ingresar el texto fuente y la clave a buscar
+        let fuente = prompt("Ingrese un texto o frase (fuente):");
+        let clave = prompt("Ingrese la clave a buscar:");
+
+        // Buscar la clave en el texto fuente
+        let posicion = fuente.indexOf(clave);
+
+        // Imprimir el resultado en la página
+        if (posicion !== -1) {
+            document.write(`La clave '${clave}' fue encontrada en la posición ${posicion}.`);
+        } else {
+            document.write(`La clave '${clave}' no fue encontrada en el texto.`);
+        }
+    </script>
+</body>
+</html>

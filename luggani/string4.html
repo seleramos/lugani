@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Palíndromo</title>
+</head>
+<body>
+    <script>
+        // Solicitar al usuario ingresar una palabra o texto
+        let palabra = prompt("Ingrese una palabra o texto:");
+
+        // Eliminar espacios y convertir a minúsculas para comparar
+        let palabraFormateada = palabra.replace(/\s/g, "").toLowerCase();
+
+        // Revertir la palabra formateada
+        let palabraRevertida = palabraFormateada.split("").reverse().join("");
+
+        // Verificar si es un palíndromo
+        if (palabraFormateada === palabraRevertida) {
+            document.write(`La palabra "${palabra}" es un palíndromo.`);
+        } else {
+            document.write(`La palabra "${palabra}" no es un palíndromo.`);
+        }
+    </script>
+</body>
+</html>

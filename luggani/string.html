@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Nombres</title>
+</head>
+<body>
+    <script>
+        let nombres = [];
+        let nombre = prompt("Ingrese un nombre (o 'Fin' para terminar):");
+
+        while (nombre !== "Fin") {
+            nombres.push(nombre);
+            nombre = prompt("Ingrese otro nombre (o 'Fin' para terminar):");
+        }
+
+        let cantidadNombres = nombres.length;
+
+        document.write(`Se ingresaron ${cantidadNombres} nombres.`);
+    </script>
+</body>
+</html>
